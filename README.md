@@ -1,16 +1,64 @@
-# React + Vite
+# 🚀 Modern React Dashboard — Frontend + Docker Learning Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **frontend-only React + Vite** dashboard built to explore **Docker containerization**, focusing on how Docker **volumes**, **image building**, and **container mapping** work in real-world frontend development environments.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Project Purpose
 
-## React Compiler
+This project was created to **understand Docker containerization for frontend development** — including how to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Containerize a React app using a custom `Dockerfile`
+- Use **Docker volumes** to map source code for live development
+- Run and manage frontend containers with **Docker commands**
+- Build and serve production-ready static assets
 
-## Expanding the ESLint configuration
+It’s also a clean starting point for building **React dashboards**, **admin panels**, or **analytics UIs**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> 🧩 **Note:** This project is **frontend-only** — there’s no backend or API integration.  
+> The main goal is to learn and practice **Docker containerization concepts** in a React environment.
+
+---
+
+## ⚙️ Tech Stack
+
+| Category        | Technology       |
+|-----------------|------------------|
+| Frontend        | React (Vite)     |
+| Package Manager | npm              |
+| Build Tool      | Vite             |
+| Containerization| Docker           |
+
+---
+Dashboard Preview
+<img width="1906" height="960" alt="image" src="https://github.com/user-attachments/assets/45eec2e9-cbcb-43c0-bcb1-8b42c2c6b95f" />
+
+Docker Preview
+<img width="1905" height="815" alt="image" src="https://github.com/user-attachments/assets/71da8b94-7ab3-4033-b0bd-c25238165a09" />
+
+## 🐳 Docker Setup & Containerization
+
+### 🏗️ Build the Docker Image
+
+```bash
+docker build -t modern-react-dashboard .
+
+▶️ Run the Container Using Docker Volumes
+docker run --name vite-container2 -p 3000:5173 --rm -v /app/node_modules -v ${PWD}:/app -e CHOKIDAR_USEPOLLING=true vite-image2
+
+💻 Local Development (Without Docker)
+# Clone the repo
+git clone https://github.com/TharushaJM/modern-react-dashboard.git
+cd modern-react-dashboard
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+
+
+
+
+
+
