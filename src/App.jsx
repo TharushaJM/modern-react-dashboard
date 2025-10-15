@@ -20,7 +20,7 @@ export default function App() {
 
           <section className="charts-row">
             <div className="card chart-card">
-              <h3>Traffic (last 7 days)</h3>
+              <h3>Traffic (last 5 days)</h3>
               <SimpleChart />
             </div>
 
